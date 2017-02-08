@@ -28,32 +28,28 @@ ready(() => {
 function start(){
     _game.name = document.getElementById('name').value;
     _game.surname = document.getElementById('surname').value;
-
+    let left = document.getElementById('left');
+    let right = document.getElementById('right');
+    let center = document.getElementById('center');
     switchTabs();
     window.onkeydown = function(e){
         if(e.keyCode === 39) {
             e.preventDefault();
-            rightClick();
+            right.click();
         }
         else if(e.keyCode === 37) {
             e.preventDefault();
-            leftClick();
+            left.click();
         }
         else if(e.keyCode === 38) {
             e.preventDefault();
-            centerClick(); 
+            center.click();
         }
     }
 
-    document
-        .getElementById('left')
-        .addEventListener('click', leftClick);
-    document
-        .getElementById('center')
-        .addEventListener('click', centerClick);
-    document
-        .getElementById('right')
-        .addEventListener('click', rightClick);
+left.addEventListener('click', leftClick);
+center.addEventListener('click', centerClick);
+right.addEventListener('click', rightClick);
 
     _game.round = 0;
     _game.rounds = [];
