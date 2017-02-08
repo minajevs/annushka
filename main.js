@@ -43,7 +43,7 @@ function start(){
         }
         else if(e.keyCode === 37) {
             e.preventDefault();
-            right.classList.add('card-active');
+            left.classList.add('card-active');
             setTimeout(() => {
                 left.classList.remove('card-active');
             }, 10)           
