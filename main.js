@@ -35,14 +35,26 @@ function start(){
     window.onkeydown = function(e){
         if(e.keyCode === 39) {
             e.preventDefault();
+            right.classList.add('card-active');
+            setTimeout(() => {
+                right.classList.remove('card-active');
+            }, 10)
             right.click();
         }
         else if(e.keyCode === 37) {
             e.preventDefault();
+            right.classList.add('card-active');
+            setTimeout(() => {
+                left.classList.remove('card-active');
+            }, 10)           
             left.click();
         }
         else if(e.keyCode === 38) {
             e.preventDefault();
+            center.classList.add('center-active');
+            setTimeout(() => {
+                center.classList.remove('center-active');
+            }, 10)             
             center.click();
         }
     }
