@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body>
+    <div class="fields show" id="fields">
+        <input type="text" placeholder="Name" id="name"> 
+        <input type="text" placeholder="Surname" id="surname">  
+        <input type="submit" id="start-btn">                         
+    </div>
+    <div class="game hide" id="game">
+        <div class="left card" id="left">
+            <img src="http://placehold.it/400x500">
+        </div>
+        <div class="center" id="center">
+            <div class="center-text">
+                Both.
+            </div>
+        </div>
+        <div class="right card" id="right">
+            <img src="http://placehold.it/400x500">
+        </div>
+    </div>
+    <div id="results">
+        <div class="fields" style="width: 500px;">
+            <h3 id="res-title"></h3>
+            <ol id="res-times"></ol>
+        </div>
+    </div>
+
+    <div id="modal-1" style="display:none">
+        <img src="http://i.imgur.com/AzKAV.jpg" width="239" height="170" alt="Just Can't Reach.">
+    </div>
+    <div class="modal">
+        <div class="modal-inner">
+            <span data-modal-close>&times;</span>
+            <div class="modal-content"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+
+
+</body>
+
+</html>
