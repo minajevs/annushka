@@ -2,6 +2,14 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+#preloadImages {
+       width: 0px;
+       height: 0px;
+       display: inline;
+       background-image: url(img/1.jpg);
+       background-image: url(img/2.jpg);
+}
+
 .card{
     background: #fff;
     position: relative;
@@ -172,8 +180,10 @@ input[type="submit"]:active {
 .fields{
   background: #eceeee;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  height: 257px;
   margin: 20px auto 0;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  
   width: 298px;
 }
 
@@ -185,7 +195,6 @@ input[type="submit"]:active {
 .fields>ul{
     padding-top: 10px;
     padding-left: 20px;
-    
 }
 
 
@@ -194,4 +203,8 @@ input[type="submit"]:active {
 }
 .hide {
   opacity: 0;
+}
+
+li.nostyle {
+    list-style-type: none;
 }

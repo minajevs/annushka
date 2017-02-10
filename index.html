@@ -8,28 +8,20 @@
 </head>
 
 <body>
+    <div id="preloadImages"></div>
     <div class="fields show" id="fields">
         <input type="text" placeholder="Name" id="name"> 
         <input type="text" placeholder="Surname" id="surname">  
         <input type="submit" id="start-btn">                         
     </div>
     <div class="game hide" id="game">
-        <div class="left card" id="left">
-            <img src="http://placehold.it/400x500">
-        </div>
-        <div class="center" id="center">
-            <div class="center-text">
-                Both.
-            </div>
-        </div>
-        <div class="right card" id="right">
-            <img src="http://placehold.it/400x500">
-        </div>
+        <img style="width:100%" id="game-image" src="img/1.jpg">
+        <div id="clock"></div>
     </div>
-    <div id="results">
+    <div class="results hide" id="results">
         <div class="fields" style="width: 500px;">
             <h3 id="res-title"></h3>
-            <ol id="res-times"></ol>
+            <ul id="res-times"></ul>
         </div>
     </div>
 
