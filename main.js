@@ -17,7 +17,7 @@ let _game = {
     round: 0,
     rounds: [],
     lastClick: {},
-    time: 60+30,
+    time: 1,
     curtime: 0
 };
 
@@ -40,7 +40,7 @@ function start(){
             e.preventDefault();
             leftClick();
         }
-        else if(e.keyCode === 38) {
+        else if(e.keyCode === 40) {
             e.preventDefault();
             centerClick();
         }
@@ -127,7 +127,7 @@ function appendTime(res){
     res.round ? li.classList.add('nostyle') : () => {};
     res.round 
         ? li.appendChild(document.createTextNode(`${res.click}`))
-        : li.appendChild(document.createTextNode(`Time: ${ms(res.time)} seconds \t Image: ${res.click}`));
+        : li.appendChild(document.createTextNode(`Time: ${ms(res.time)} \t Image: ${res.click}`));
     times.appendChild(li);
 }
 
@@ -162,5 +162,9 @@ function sec(d) {
 function ms(millis) {
   var minutes = Math.floor(millis / 60000);
   var seconds = ((millis % 60000) / 1000).toFixed(0);
-  return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+  var mil = (millis%1000).toString();
+  console.log(mil.length);
+  return minutes + ":" + (seconds < 10 ? '0' : '') + seconds + '.' + ('000'+mil).substring(mil.length);;
 }
+
+
