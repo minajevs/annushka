@@ -17,7 +17,7 @@ let _game = {
     round: 0,
     rounds: [],
     lastClick: {},
-    time: 10,
+    time: 60+30,
     curtime: 0
 };
 
